@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "563965760620",
+    "firebase_url": "https://mjurescue-4b0ef.firebaseio.com",
+    "project_id": "mjurescue",
+    "storage_bucket": "mjurescue.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:563965760620:android:91ec1f5ed7dc2eeb",
+        "android_client_info": {
+          "package_name": "itsci.mju.com.mjurescue"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "563965760620-p7q3pe1f2uvntok391mi7agdmf88dduo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAjrUL51WxCljiGXNB3_J82QBVQI0Et99A"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

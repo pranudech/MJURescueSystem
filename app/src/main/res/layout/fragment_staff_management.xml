@@ -1,0 +1,44 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activity.HomeStudentActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="refresh LIST"
+            android:drawablePadding="6dp"
+            android:id="@+id/btnRefresh"
+            android:drawableLeft="@drawable/ic_refresh"
+            android:gravity="left|center"
+            android:textAlignment="center"
+            android:background="@color/common_google_signin_btn_text_dark_disabled"
+            android:layout_weight="0.03" />
+
+        <TextView
+            android:text="@string/textStaffMan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView2"
+            android:layout_weight="0.08"
+            android:textColor="#002aff"
+            android:textAlignment="center"/>
+
+    </LinearLayout>
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@android:id/list"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+</LinearLayout>
+

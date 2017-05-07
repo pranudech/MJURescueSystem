@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#dde9Cf">
+
+    <TextView
+        android:text="Specification of accident"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/textHead"
+        android:paddingTop="10dp"
+        android:paddingLeft="10dp"
+        android:textStyle="normal|bold"
+        android:textSize="18sp"
+        android:textColor="@color/wallet_link_text_light"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="8dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:text="สถานะอุบัติเหตุ : "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:paddingLeft="10dp"
+            android:layout_below="@+id/textHead"
+            android:layout_alignParentStart="true"
+            android:id="@+id/textStatus"
+            android:textStyle="normal|bold"
+            android:textColor="@android:color/black"/>
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:srcCompat="@drawable/request_red"
+            android:id="@+id/imageStatus"
+            android:layout_alignBottom="@+id/textStatus"
+            android:layout_toEndOf="@+id/textStatus" />
+
+        <TextView
+            android:text="@string/textGPS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:paddingLeft="35dp"
+            android:layout_below="@+id/textHead"
+            android:layout_alignParentStart="true"
+            android:id="@+id/textGPS"
+            android:textStyle="normal|bold"
+            android:textColor="@android:color/holo_orange_dark"
+            android:onClick="onClickGPS" />
+
+    </LinearLayout>
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:paddingTop="10dp" />
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fillViewport="false"
+        android:id="@+id/scrollView">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dip"
+            android:weightSum="1">
+
+            <TextView
+                android:text="รายละเอียด"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView4"
+                android:layout_below="@+id/textStatus"
+                android:layout_alignParentStart="true"
+                android:textAlignment="viewStart"
+                android:textColor="@color/wallet_link_text_light"/>
+
+            <TextView
+                android:text="ชื่อผู้ประสบเหตุ"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="30dp"
+                android:id="@+id/txtName"
+                android:layout_below="@+id/textView4"
+                android:layout_alignParentStart="true"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:text="เบอร์โทร"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtName"
+                android:layout_alignParentStart="true"
+                android:id="@+id/txtPhoneNumber"
+                android:paddingTop="5dp"
+                android:paddingLeft="30dp"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:text="เบอร์โทรคนสนิท"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtPhoneNumber"
+                android:layout_alignParentStart="true"
+                android:id="@+id/txtNumberReserve"
+                android:paddingTop="5dp"
+                android:paddingLeft="30dp"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:text="กรุ๊ปเลือด"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtNumberReserve"
+                android:layout_alignParentStart="true"
+                android:id="@+id/txtblood"
+                android:paddingTop="5dp"
+                android:paddingLeft="30dp"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:text="โรคประจำตัว"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtblood"
+                android:layout_alignParentStart="true"
+                android:id="@+id/txtdisease"
+                android:paddingTop="5dp"
+                android:paddingLeft="30dp"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:text="รหัสประจำตัวประชาชน"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtdisease"
+                android:layout_alignParentStart="true"
+                android:id="@+id/txtidCard"
+                android:paddingTop="5dp"
+                android:paddingLeft="30dp"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:text="-- ยังไม่ได้รับแจ้งเหตุ --"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtidCard"
+                android:layout_alignParentStart="true"
+                android:id="@+id/txtReceive"
+                android:textAlignment="center"
+                android:paddingTop="5dp" />
+
+            <Button
+                android:text="รับแจ้งเหตุ"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnReceive"
+                android:layout_below="@+id/txtReceive"
+                android:layout_centerHorizontal="true"
+                android:onClick="onBtnClickReceive"
+                android:textColor="@color/wallet_link_text_light" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

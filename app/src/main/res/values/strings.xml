@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">MJURescue</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="textGPS"><u>GPS นำทาง ไปยังจุดเกิดเหตุ</u></string>
+    <string name="textRequest">** รายการร้องขอช่วยเหลือทั้งหมด **</string>
+    <string name="textStaffMan">** เลือกรายการเพื่อปิดการทำงาน **</string>
+</resources>
